@@ -1,0 +1,84 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+   
+    link(href="style.css", rel="stylesheet", type="text/css")
+    
+  body
+
+    h1 MI PRIMERA  COMPILACION EN PUG    
+    h2 Johnatan Gonzalez Velez
+   
+    p Texto dentro de un tag de #[em parrafo]
+    
+    // Los comentarios HTML son visibles en el codigo HTML
+    
+    //- Los comentarios PUG no son visibles
+    
+    //  Bloque de Comentario HTML
+      | Comentario escrito
+      | en multilinea
+      
+    p
+      | Texto en 
+      | multilinea
+      
+    p.
+      Otra forma de agregar 
+      textos largos
+     
+    h2 #IDs y Clases css
+    
+    //- Generar un div con ID, asi de simple.
+    #contenido
+    
+      //- Generar un div un clase css
+      .sidebar
+        p Parrafo dentro de un div con clase css .sidebar
+    
+    h2 Atributos
+    //- Como ya vimos al inicio de este documento, hemos utilizado
+      | los atributos en las etiquetas html,link, y meta
+    
+    //- Podemos agregar atributos a un elemento html, dentro de un parentesis,
+      | ya sea separandolos por coma o espacio
+    input.input_text(type="text" placeholder="Ingresa un texto aquí", maxlength="8")
+    
+    h2 Anidación
+    
+    nav
+      ul.menu
+        //- Anidamiento simple
+          | usando saltos de linea y tab para insertar tags html dentro de otros
+        li
+          a(href="#") Inicio  
+        //- Anidamiento con expansion de bloque
+          | Escribir una linea con tags html anidados, 
+        li: a(href="#", title="Portafolio") Portafolio
+        
+    h2 Variables
+    //- En jade podemos declarar variables
+      | anteponiendo el simbolo "-" antes del nombre de variable
+      
+    //- Variable simple
+    - variable = "Pug Template"
+    
+    h3 El valor de nuestra variable es:  #{variable} !!!
+    
+    //- Variable como objeto
+    - datos = { nombre: 'Johnatan Gonzalez Velez', pais:'Colombia' }
+    
+    p.describe Mi nombre es #{datos.nombre} y vivo en Medellin,#{datos.pais}
+    
+    //- Variable Booleana(true/false)
+    - booleano = true
+    
+   
+  
+    
+    
+   
+
+    
+    
